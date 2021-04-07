@@ -1,8 +1,7 @@
 #Loading the library caTools for sample.split()
 library(caTools)
 #Reading the appointment1000.csv in R
-appoint=read.table("D:/Documents/UNE/Trimester-4/STAT430 - Statistical
-Learning/Assignment-1/appointment1000.csv", header = TRUE,sep=",")
+appoint=read_xlsx(file.choose())
 attach(appoint)
 #Mosaic plot for plotting Number of people who showed up for the appointment and people who recieved the SMS
 mosaicplot(No.show ~ SMS_received, xlab="Attendence for the Appointment", ylab="SMS Recieved", main="Affect of Recieved SMS on the Attendence of the patients", col=c("powderblue","mistyrose"))
