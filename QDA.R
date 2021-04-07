@@ -2,7 +2,7 @@
 library(MASS)
 library(caTools)
 #Reading the appointment1000.csv in R
-appoint=read.table("D:/Documents/UNE/Trimester-4/STAT430 - StatisticalLearning/Assignment-1/appointment1000.csv", header = TRUE,sep=",")
+appoint=read_xlsx(file.choose())
 attach(appoint)
 #Fitting the original dataset in the Logistic Regression model
 qda.fit=qda(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability+SMS_received, data=appoint)
