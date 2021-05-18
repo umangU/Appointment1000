@@ -9,14 +9,14 @@ qda.fit=qda(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability+SMS_r
 qda.fit
 # Set Seed
 set.seed(123, kind = "Mersenne-Twister", normal.kind = "Inversion")
-#Divide the dataset based on split ratio
+# Divide the dataset based on split ratio
 sample = sample.split(appoint, SplitRatio = .6)
-#Segregate the train and test data based on the above split ratio
+# Segregate the train and test data based on the above split ratio
 train = subset(appoint, sample == TRUE)
 test = subset(appoint, sample == FALSE)
-#Using Predict to get a list of three elements namely 'class', 'posterior' and 'x'
+# Using Predict to get a list of three elements namely 'class', 'posterior' and 'x'
 qda.class=predict(qda.fit,test)$class 
-#'class' contains the predictions about the people going as per their appointments or not
+# 'class' contains the predictions about the people going as per their appointments or not
 #Confusion matrix between the predicted values and the original values in the test dataset
 table(qda.class,test$No.show)
 #calculating the mean to find out the proportion of correct predictions
