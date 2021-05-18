@@ -17,9 +17,9 @@ test = subset(appoint, sample == FALSE)
 # Using Predict to get a list of three elements namely 'class', 'posterior' and 'x'
 qda.class=predict(qda.fit,test)$class 
 # 'class' contains the predictions about the people going as per their appointments or not
-#Confusion matrix between the predicted values and the original values in the test dataset
+# Confusion matrix between the predicted values and the original values in the test dataset
 table(qda.class,test$No.show)
-#calculating the mean to find out the proportion of correct predictions
+# calculating the mean to find out the proportion of correct predictions
 mean(qda.class==test$No.show)
-#calculating the mean to find out the proportion of incorrect predictions (test error rate)
+# calculating the mean to find out the proportion of incorrect predictions (test error rate)
 mean(qda.class!=test$No.show)
