@@ -1,13 +1,13 @@
-# Loading the Mass and caTools for libraries for qda() and sample.split() function respectively
+#Loading the Mass and caTools for libraries for qda() and sample.split() function respectively
 library(MASS)
 library(caTools)
-# Reading the appointment1000.csv in R
+#Reading the appointment1000.csv in R
 appoint=read_xlsx(file.choose())
 attach(appoint)
-# Fitting the original dataset in the Logistic Regression model
+#Fitting the original dataset in the Logistic Regression model
 qda.fit=qda(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability+SMS_received, data=appoint)
 qda.fit
-# Set Seed
+#Set Seed
 set.seed(123, kind = "Mersenne-Twister", normal.kind = "Inversion")
 # Divide the dataset based on split ratio
 sample = sample.split(appoint, SplitRatio = .6)
