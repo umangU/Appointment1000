@@ -1,6 +1,6 @@
-# Loading the library caTools for sample.split()
+#Loading the library caTools for sample.split()
 library(caTools)
-# Reading the appointment1000.csv in R
+#Reading the appointment1000.csv in R
 appoint=read_xlsx(file.choose())
 attach(appoint)
 # Mosaic plot for plotting Number of people who showed up for the appointment and people who recieved the SMS
