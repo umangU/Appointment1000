@@ -1,7 +1,7 @@
 #Loading the Mass and caTools for libraries for qda() and sample.split() function respectively
 library(MASS)
 library(caTools)
-# Reading the appointment1000.csv in R
+#Reading the appointment1000.csv in R
 appoint=read_xlsx(file.choose())
 attach(appoint)
 # Fitting the original dataset in the Logistic Regression model
