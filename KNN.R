@@ -1,7 +1,7 @@
 # Loading the libraries class and caTools for knn() and sample.split() respectively
 library(class)
 library(caTools)
-#Reading the appointment1000.csv in R
+# Reading the appointment1000.csv in R
 appoint=read.table("D:/Documents/UNE/Trimester-4/STAT430 - StatisticalLearning/Assignment-1/appointment1000.csv", header = TRUE,sep=",")
 #Conveting the original dataset to numeric dataset
 app <- sapply(appoint, as.numeric)
