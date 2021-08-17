@@ -1,4 +1,4 @@
-#Loading the libraries class and caTools for knn() and sample.split() respectively
+# Loading the libraries class and caTools for knn() and sample.split() respectively
 library(class)
 library(caTools)
 #Reading the appointment1000.csv in R
