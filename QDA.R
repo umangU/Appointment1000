@@ -1,4 +1,4 @@
-#Loading the Mass and caTools for libraries for qda() and sample.split() function respectively
+#Code Updatedoading the Mass and caTools for libraries for qda() and sample.split() function respectively
 library(MASS)
 library(caTools)
 #Reading the appointment1000.csv in R
