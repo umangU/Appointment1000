@@ -17,7 +17,7 @@ glm.fit=glm(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability+SMS_r
 summary(glm.fit)
 # Show the contrasts associated with the factor No.show
 contrasts(No.show)
-#Predicting the probabilities for No.show from the original dataset
+# Predicting the probabilities for No.show from the original dataset
 glm.probs=predict(glm.fit,type="response")
 #Generate a vector with replicated values 'No'
 glm.pred=rep("No",1000)
