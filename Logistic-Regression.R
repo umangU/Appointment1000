@@ -19,7 +19,7 @@ summary(glm.fit)
 contrasts(No.show)
 # Predicting the probabilities for No.show from the original dataset
 glm.probs=predict(glm.fit,type="response")
-#Generate a vector with replicated values 'No'
+# Generate a vector with replicated values 'No'
 glm.pred=rep("No",1000)
 #Converting the values with probability more than 0.5 to values 'Yes'
 glm.pred[glm.probs>0.5]="Yes"
