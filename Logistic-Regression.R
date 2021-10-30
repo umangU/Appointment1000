@@ -25,9 +25,9 @@ glm.pred=rep("No",1000)
 glm.pred[glm.probs>0.5]="Yes"
 # Confusion matrix between the predicted values and the original values
 table(glm.pred,appoint$No.show)
-#calculating the mean to find out the proportion of correct predictions
+# calculating the mean to find out the proportion of correct predictions
 mean(glm.pred==appoint$No.show)
-#Fitting the train dataset in the Logistic Regression model
+# Fitting the train dataset in the Logistic Regression model
 glm_train.fit=glm(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability+SMS_received, family=binomial, data=train)
 #Predicting the probabilities for No.show from the train dataset
 glm_train.probs=predict(glm_train.fit,test,type="response")
