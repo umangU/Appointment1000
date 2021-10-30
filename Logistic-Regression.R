@@ -33,9 +33,9 @@ glm_train.fit=glm(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability
 glm_train.probs=predict(glm_train.fit,test,type="response")
 # Generate a vector with replicated values 'No' with size as that of the observations in the test dataset
 glm_train.pred=rep("No",454)
-#Converting the values with probability more than 0.5 to values 'Yes'
+# Converting the values with probability more than 0.5 to values 'Yes'
 glm_train.pred[glm_train.probs>0.5]="Yes"
-#Confusion matrix between the predicted values and the original values in the test dataset
+# Confusion matrix between the predicted values and the original values in the test dataset
 table(glm_train.pred,test$No.show)
 # calculating the mean to find out the proportion of correct predictions
 mean(glm_train.pred==test$No.show)
