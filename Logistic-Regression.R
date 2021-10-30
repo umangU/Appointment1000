@@ -29,9 +29,9 @@ table(glm.pred,appoint$No.show)
 mean(glm.pred==appoint$No.show)
 # Fitting the train dataset in the Logistic Regression model
 glm_train.fit=glm(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability+SMS_received, family=binomial, data=train)
-#Predicting the probabilities for No.show from the train dataset
+# Predicting the probabilities for No.show from the train dataset
 glm_train.probs=predict(glm_train.fit,test,type="response")
-#Generate a vector with replicated values 'No' with size as that of the observations in the test dataset
+# Generate a vector with replicated values 'No' with size as that of the observations in the test dataset
 glm_train.pred=rep("No",454)
 #Converting the values with probability more than 0.5 to values 'Yes'
 glm_train.pred[glm_train.probs>0.5]="Yes"
