@@ -21,9 +21,9 @@ contrasts(No.show)
 glm.probs=predict(glm.fit,type="response")
 # Generate a vector with replicated values 'No'
 glm.pred=rep("No",1000)
-#Converting the values with probability more than 0.5 to values 'Yes'
+# Converting the values with probability more than 0.5 to values 'Yes'
 glm.pred[glm.probs>0.5]="Yes"
-#Confusion matrix between the predicted values and the original values
+# Confusion matrix between the predicted values and the original values
 table(glm.pred,appoint$No.show)
 #calculating the mean to find out the proportion of correct predictions
 mean(glm.pred==appoint$No.show)
