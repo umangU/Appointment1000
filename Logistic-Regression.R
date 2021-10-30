@@ -37,7 +37,7 @@ glm_train.pred=rep("No",454)
 glm_train.pred[glm_train.probs>0.5]="Yes"
 #Confusion matrix between the predicted values and the original values in the test dataset
 table(glm_train.pred,test$No.show)
-#calculating the mean to find out the proportion of correct predictions
+# calculating the mean to find out the proportion of correct predictions
 mean(glm_train.pred==test$No.show)
-#calculating the mean to find out the proportion of incorrect predictions (test error rate)
+# calculating the mean to find out the proportion of incorrect predictions (test error rate)
 mean(glm_train.pred!=test$No.show)
