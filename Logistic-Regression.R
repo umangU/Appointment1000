@@ -7,7 +7,7 @@ attach(appoint)
 mosaicplot(No.show ~ SMS_received, xlab="Attendence for the Appointment", ylab="SMS Recieved", main="Affect of Recieved SMS on the Attendence of the patients", col=c("powderblue","mistyrose"))
 # Set Seed so that same sample can be reproduced in future
 set.seed(123, kind = "Mersenne-Twister", normal.kind = "Inversion")
-# Divide the dataset based on split ratio
+#Divide the dataset based on split ratio
 sample = sample.split(appoint, SplitRatio = .6)
 # Segregate the train and test data based on the above split ratio
 train = subset(appoint, sample == TRUE)
