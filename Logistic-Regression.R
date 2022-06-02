@@ -12,7 +12,7 @@ sample = sample.split(appoint, SplitRatio = .6)
 # Segregate the train and test data based on the above split ratio
 train = subset(appoint, sample == TRUE)
 test = subset(appoint, sample == FALSE)
-# Fitting the original dataset in the Logistic Regression model
+#Fitting the original dataset in the Logistic Regression model
 glm.fit=glm(No.show~Gender+Age+Hypertension+Diabetes+Alcoholism+Disability+SMS_received, family=binomial, data=appoint)
 summary(glm.fit)
 # Show the contrasts associated with the factor No.show
