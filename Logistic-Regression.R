@@ -1,4 +1,4 @@
-# Loading the library caTools for sample.split()
+#Loading the library caTools for sample.split()
 library(caTools)
 # Reading the appointment1000.csv in R
 appoint=read_xlsx(file.choose())
